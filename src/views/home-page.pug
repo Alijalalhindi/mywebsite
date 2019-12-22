@@ -1,0 +1,15 @@
+html
+body
+	.container
+		div.serach
+		form.search
+			input.data(type="text",value="")
+			br
+			input.submit(type="submit")    
+		each item in movie
+			div
+				a(href=item.image)
+					p.title=item.title
+				img(src=item.image, alt=item.title,style="width: 200px;height: 300px;") 
+style=styles
+script(type="text/javascript") !{script}
