@@ -4,6 +4,7 @@ const app = express();
 const mongoose = require('mongoose');
 
 const Student = require("./assets/Student");
+const dateFormating = require('../node_modules/date-formatting-ali/index');
 app.set('view engine', 'pug');
 app.set('views', path.join(__dirname, './views'));
 app.use(express.json());
@@ -97,5 +98,6 @@ app.get('/student', Student.getStudent)
 app.post('/student', Student.insertStudent)
 app.put('/student', Student.updateStudent)
 app.delete('/student', Student.removeStudent)
+app.get('/date',dateFormating.addDays)
 
 app.listen(3000, () => console.log('127.0.0.1:3000'));
