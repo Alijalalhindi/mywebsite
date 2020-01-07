@@ -15,7 +15,7 @@
   "homepages": "https://github.com/Alijalalhindi/mywebsite",
   "dependencies": {
     "body-parser": "^1.19.0",
-    "date-formatting-ali": "^1.0.2",
+    "date-formatting-ali": "^1.0.3",
     "express": "^4.16.4",
     "gh-pages": "^2.1.1",
     "js-pagination": "^0.1.2",
