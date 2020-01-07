@@ -80,7 +80,7 @@ async function topRated(req, res) {
             return temp
         });
     }
-
+//asasasas
     allResult = {
         page: req.query.page,
         totalresults: data.total_results,
@@ -91,8 +91,9 @@ async function topRated(req, res) {
     res.send(allResult);
 }
 
-function test(req, res) {                                 
-    const dateFormatted = dateFormating.format('mm-dd-yyyy-[kawasaki]-hh-min-ss' , new Date())
+
+function test(req, res) {                               
+    const dateFormatted = dateFormating.format('mm-dd-yyyy-[kawasaki]-hh-min-ss' , new Date());
     res.send(dateFormatted);
 }
 
