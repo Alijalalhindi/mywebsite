@@ -31,7 +31,7 @@ async function homePage(req, res) {
         styles,
         script
     };
-    //console.log('styles', styles);
+    
     res.render('home-page', pugData);
 }
 
@@ -80,7 +80,7 @@ async function topRated(req, res) {
             return temp
         });
     }
-//asasasas
+
     allResult = {
         page: req.query.page,
         totalresults: data.total_results,
