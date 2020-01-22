@@ -4,6 +4,7 @@ const app = express();
 const mongoose = require('mongoose');
 
 const Student = require("./assets/Student");
+const dateFormating = require('date-formatting-ali');
 app.set('view engine', 'pug');
 app.set('views', path.join(__dirname, './views'));
 app.use(express.json());
@@ -30,7 +31,7 @@ async function homePage(req, res) {
         styles,
         script
     };
-    console.log('styles', styles);
+    
     res.render('home-page', pugData);
 }
 
@@ -90,6 +91,12 @@ async function topRated(req, res) {
     res.send(allResult);
 }
 
+
+function test(req, res) {                               
+    const dateFormatted = dateFormating.format('mm-dd-yyyy-[kawasaki]-hh-min-ss' , new Date());
+    res.send(dateFormatted);
+}
+
 app.get('/', homePage);
 app.get('/search', search);
 app.get('/api_data/top-rated', topRated);
@@ -97,5 +104,6 @@ app.get('/student', Student.getStudent)
 app.post('/student', Student.insertStudent)
 app.put('/student', Student.updateStudent)
 app.delete('/student', Student.removeStudent)
+app.get('/date', test)
 
 app.listen(3000, () => console.log('127.0.0.1:3000'));

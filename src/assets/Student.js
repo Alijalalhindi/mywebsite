@@ -55,7 +55,7 @@ function updateStudent(req, res) {
     });
     setTimeout(() => {
         getStudent(req, res);
-    },2000);
+    }, 2000);
 }
 
 function removeStudent(req, res) {
